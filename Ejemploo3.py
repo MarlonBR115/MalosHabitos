@@ -12,15 +12,26 @@ def Menu(opcionMenu):
         rectanguloAltura = float(input("Ingrese el valor de la altura del rectángulo: "))
         resultadoRectangulo = areaRectangulo(rectanguloBase, rectanguloAltura)
         print("Área del rectángulo:", resultadoRectangulo)
+        validarRectangulo=input("Desea realizar otra operación(Y/N): ")
+        if(validarRectangulo=='y' or validarRectangulo=='Y'):
+            main()
+        if(validarRectangulo=='n' or validarRectangulo=='N'):
+            exit()
     if(opcionMenu==2):
         trianguloBase = float(input("Ingrese el valor de la base del triángulo: "))
         trianguloAltura = float(input("Ingrese el valor de la altura del triángulo: "))
         resultadoTriangulo = areaTriangulo(trianguloBase, trianguloAltura)
         print("Área del triángulo:", resultadoTriangulo)
+        validarTriangulo = input("Desea realizar otra operación(Y/N): ")
+        if (validarTriangulo == 'y' or validarTriangulo == 'Y'):
+            main()
+        if (validarTriangulo == 'n' or validarTriangulo == 'N'):
+            exit()
     if(opcionMenu==3):
         exit()
 # Función principal
 def main():
+
     print("---------------Menú---------------")
     print("[1.] Hallar área del rectángulo.")
     print("[2.] Hallar área del triángulo.")
