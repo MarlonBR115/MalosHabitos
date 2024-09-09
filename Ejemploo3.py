@@ -1,23 +1,32 @@
-# Función para calcular el área de un rectángulo
-def f(a, b):
-    result = a * b
-    return result
+def areaRectangulo(baseRectangulo, alturaRectangulo):
+    rectangulo_area = baseRectangulo * alturaRectangulo
+    return rectangulo_area
 
 # Función para calcular el área de un triángulo
-def g(b, h):
-    r = 0.5 * b * h
-    return r
-
+def areaTriangulo(baseTriangulo, alturaTriangulo):
+    triangulo_area = 0.5 * baseTriangulo * alturaTriangulo
+    return triangulo_area
+def Menu(opcionMenu):
+    if(opcionMenu==1):
+        rectanguloBase = float(input("Ingrese el valor de la base del rectángulo: "))
+        rectanguloAltura = float(input("Ingrese el valor de la altura del rectángulo: "))
+        resultadoRectangulo = areaRectangulo(rectanguloBase, rectanguloAltura)
+        print("Área del rectángulo:", resultadoRectangulo)
+    if(opcionMenu==2):
+        trianguloBase = float(input("Ingrese el valor de la base del triángulo: "))
+        trianguloAltura = float(input("Ingrese el valor de la altura del triángulo: "))
+        resultadoTriangulo = areaTriangulo(trianguloBase, trianguloAltura)
+        print("Área del triángulo:", resultadoTriangulo)
+    if(opcionMenu==3):
+        exit()
 # Función principal
 def main():
-    x = 4
-    y = 6
-    rect_area = f(x, y)
-    print("Área del rectángulo:", rect_area)
-
-    base = 5
-    altura = 8
-    tri_area = g(base, altura)
-    print("Área del triángulo:", tri_area)
+    print("---------------Menú---------------")
+    print("[1.] Hallar área del rectángulo.")
+    print("[2.] Hallar área del triángulo.")
+    print("[3.] Salir.")
+    print("----------------------------------")
+    Opcion = int(input("Ingrese la opción: "))
+    Menu(Opcion)
 
 main()
